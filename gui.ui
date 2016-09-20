@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>721</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="layout_left">
+      <item>
+       <layout class="QVBoxLayout" name="layout_button">
+        <item>
+         <widget class="QPushButton" name="button_start">
+          <property name="text">
+           <string>Start Measurement</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_camera_start">
+          <property name="text">
+           <string>Start Camera</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_camera_stop">
+          <property name="text">
+           <string>Stop Camera</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_camera_capture_image">
+          <property name="text">
+           <string>Capture Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_calculate_camera_parameters">
+          <property name="text">
+           <string>Calculate Camera Parameters</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_correct_image">
+          <property name="text">
+           <string>Correct Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_reset_mirror">
+          <property name="text">
+           <string>Reset scanner</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_test">
+          <property name="text">
+           <string>#TEST#</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_geometry">
+          <property name="text">
+           <string>Scanner</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combobox_canal_horizontal"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combobox_canal_vertical"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_measure">
+          <property name="text">
+           <string>Velocity and Force</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combobox_canal_measure"/>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout">
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lable_distance">
+            <property name="text">
+             <string>Distance to object [m]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineedit_distance_to_object"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineedit_distance_between_mirrors"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_distance_between_scanners">
+            <property name="text">
+             <string>Distance between scanners [m]</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="layout_file">
+        <item>
+         <widget class="QPushButton" name="button_folder_measurement">
+          <property name="text">
+           <string>Select Folder For Measurement</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineedit_folder_measurement"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_file_name">
+          <property name="text">
+           <string>File Name</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineedit_file_name"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_folder_image">
+          <property name="text">
+           <string>Select Folder For Images</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineedit_folder_image"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_set_to_one_point">
+          <property name="text">
+           <string>Set Mirror To Point</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineedit_one_point"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="layout_right">
+      <item>
+       <layout class="QVBoxLayout" name="layout_points">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Mesh</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_define_points">
+          <property name="text">
+           <string>Define points</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radiobutton_mesh_points">
+          <property name="text">
+           <string>mesh points</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">buttonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radiobutton_area_border">
+          <property name="text">
+           <string>area border</string>
+          </property>
+          <attribute name="buttonGroup">
+           <string notr="true">buttonGroup</string>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textedit_define_points"/>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="form_mesh_properites">
+          <item row="0" column="0">
+           <widget class="QLabel" name="maxAreaLabel">
+            <property name="text">
+             <string>Max Area</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineedit_mesh_max_area"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="minAngleLabel">
+            <property name="text">
+             <string>Min Angle</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineedit_mesh_min_angle"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_preview_mesh">
+          <property name="text">
+           <string>Create/Preview mesh</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>770</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
